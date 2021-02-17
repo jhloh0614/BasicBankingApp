@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transaction_card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/side_padding"
+    android:layout_marginTop="@dimen/side_padding"
+    android:layout_marginEnd="@dimen/side_padding"
+    android:clickable="true"
+    android:focusable="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_between_elements">
+
+        <TextView
+            android:id="@+id/item_sender"
+            style="?attr/textAppearanceHeadline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Sender" />
+
+        <ImageView
+            android:id="@+id/icon_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_between_elements"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/item_sender"
+            app:layout_constraintStart_toEndOf="@id/item_sender"
+            app:layout_constraintTop_toTopOf="@id/item_sender"
+            app:srcCompat="@drawable/ic_arrow_transfer_to" />
+
+        <TextView
+            android:id="@+id/item_receiver"
+            style="?attr/textAppearanceHeadline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_between_elements"
+            app:layout_constraintBottom_toBottomOf="@id/item_sender"
+            app:layout_constraintStart_toEndOf="@id/icon_arrow"
+            app:layout_constraintTop_toTopOf="@id/item_sender"
+            tools:text="Receiver" />
+
+        <ImageView
+            android:id="@+id/icon_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_elements"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_sender"
+            app:srcCompat="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/item_date"
+            style="?attr/textAppearanceBody2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_between_elements"
+            app:layout_constraintBottom_toBottomOf="@id/icon_calendar"
+            app:layout_constraintStart_toEndOf="@id/icon_calendar"
+            app:layout_constraintTop_toTopOf="@id/icon_calendar"
+            tools:text="Date and time" />
+
+        <TextView
+            android:id="@+id/item_transact_amount"
+            style="?attr/textAppearanceHeadline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/icon_calendar"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="RM1000.00" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
